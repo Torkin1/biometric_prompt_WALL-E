@@ -1,7 +1,19 @@
 package com.mihaijianu.dmlbank.banktransfer;
 
-public class Account {
-    private String username;
+public class Account{
+
+    private static Account reference = null;
+    private String username = "Bill Gates";
+    private int balance = 120;
+
+    public static Account getReference(){
+        if(reference == null){
+            reference = new Account();
+        }
+        return reference;
+    }
+
+    private Account(){}
 
     public String getUsername() {
         return username;
@@ -19,7 +31,6 @@ public class Account {
         this.balance = balance;
     }
 
-    private int balance;
 }
 
 

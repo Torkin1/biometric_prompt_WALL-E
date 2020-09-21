@@ -23,20 +23,26 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.mihaijianu.dmlbank.banktransfer.Account;
 
 import java.util.ArrayList;
 import java.util.concurrent.Executor;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: Sostituire costanti con dati utente
     TextView username, walletuser;
-    int currentBudget = 98;
+
+    Account account = Account.getReference();
+    String user = account.getUsername();
+    int currentBudget = account.getBalance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        username = findViewById(R.id.username);
+        username.setText(user);
 
         //creating the chart
         //Todo: creare il grafico, è uno standard, vanno aggiunte le variabili
@@ -45,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
 
         // creato un array che comporra i dati del grafico a torta, con dati passati e l'ultimo da aggiornare,
         //con le entrate mensili/giornaliere
-        // TODO: Sostituire costanti con dati utente
         visitors.add(new PieEntry(67, "2016"));
         visitors.add(new PieEntry(75, "2017"));
         visitors.add(new PieEntry(90, "2018"));
