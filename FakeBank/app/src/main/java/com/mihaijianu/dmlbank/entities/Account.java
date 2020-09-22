@@ -1,4 +1,4 @@
-package com.mihaijianu.dmlbank.banktransfer;
+package com.mihaijianu.dmlbank.entities;
 
 public class Account{
 

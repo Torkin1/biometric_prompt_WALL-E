@@ -4,9 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.graphics.drawable.AnimationDrawable;
 
 import androidx.biometric.BiometricPrompt;
@@ -23,7 +21,7 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
-import com.mihaijianu.dmlbank.banktransfer.Account;
+import com.mihaijianu.dmlbank.entities.Account;
 
 import java.util.ArrayList;
 import java.util.concurrent.Executor;

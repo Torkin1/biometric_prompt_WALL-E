@@ -1,6 +1,8 @@
 package com.mihaijianu.dmlbank.banktransfer;
 
-public class bankTransferController {
+import com.mihaijianu.dmlbank.entities.Account;
+
+public class BankTransferController {
 
     public void pay(Account payerAccount, int toPay) throws InsufficentBalanceException {
 
