@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         username.setText(user);
 
         //creating the chart
-        //Todo: creare il grafico, è uno standard, vanno aggiunte le variabili
+        //Todo: creare il grafico, Ã¨ uno standard, vanno aggiunte le variabili
         PieChart pieChart = findViewById(R.id.pieChart);
         ArrayList<PieEntry> visitors = new ArrayList<>();
 
@@ -74,60 +75,11 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(4000);
         animationDrawable.start();
 
-        //biometric mangaer, controllo se può usare o meno il biometric
-        BiometricManager biometricManager = BiometricManager.from(this);
-        switch (biometricManager.canAuthenticate()) {//userò una costate per vedere le diverse possibilità
-            case BiometricManager.BIOMETRIC_SUCCESS: //successo, permesso fornito
-                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE://no hardware
-                Toast.makeText(getApplicationContext(), "No Hardware", Toast.LENGTH_LONG).show();
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE://no hardware disponibile
-                Toast.makeText(getApplicationContext(), "Hardware unvailable", Toast.LENGTH_LONG).show();
-                //Todo bottone che varia
-                break;
-            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED://no hardware
-                Toast.makeText(getApplicationContext(), "No fingerPrints saved", Toast.LENGTH_LONG).show();
-                break;
-        }
-
-        //biometric dialog box
-        //creazione executer
-        Executor executor = ContextCompat.getMainExecutor(this);
-
-        //biometricPrompt
-        final BiometricPrompt biometricPrompt = new BiometricPrompt(MainActivity.this, executor, new BiometricPrompt.AuthenticationCallback() {
-            @Override//chiamato quando ci sono problemi nell'autenticazione
-            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
-                super.onAuthenticationError(errorCode, errString);
-            }
-
-            @Override//chiamato se ho un successo con l'auttenticazione
-            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
-                super.onAuthenticationSucceeded(result);
-                Toast.makeText(getApplicationContext(), "fingerprint accepted", Toast.LENGTH_LONG).show();
-            }
-
-            @Override//chiamato se se ho fallito l'autenticazione
-            public void onAuthenticationFailed() {
-                // TODO: payment fails, return to main menu
-                super.onAuthenticationFailed();
-            }
-        });
-
-        //Creo il biometric Dialog
-        final BiometricPrompt.PromptInfo promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("PayConfirmation")
-                .setDescription("Requestd fingerprint to acquire google, a total of 20 bilions")
-                .setNegativeButtonText("Cancel")
-                .build();
 
         findViewById(R.id.pay_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                biometricPrompt.authenticate(promptInfo);
-                //TODO: start transfer ativity
+                startActivity(new Intent(getApplicationContext(), TransferActivity.class));
             }
         });
 
