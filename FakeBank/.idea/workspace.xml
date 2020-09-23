@@ -59,7 +59,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-20T15:19:19.851Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-252257646">
@@ -154,10 +154,11 @@
       <screen x="-1440" y="-200" width="1440" height="860" />
     </state>
     <state x="-970" y="33" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/-1440.-200.1440.860@-1440.-200.1440.860" timestamp="1600617275148" />
-    <state x="-915" y="-61" key="#com.intellij.ide.util.MemberChooser" timestamp="1600685614136">
-      <screen x="-1440" y="-200" width="1440" height="860" />
+    <state x="700" y="169" key="#com.intellij.ide.util.MemberChooser" timestamp="1600866511912">
+      <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="-915" y="-61" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/-1440.-200.1440.860@-1440.-200.1440.860" timestamp="1600685614136" />
+    <state x="700" y="169" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1600866511912" />
     <state x="-1040" y="-42" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1600684483762">
       <screen x="-1440" y="-200" width="1440" height="860" />
     </state>
@@ -170,10 +171,11 @@
       <screen x="-1440" y="-200" width="1440" height="860" />
     </state>
     <state x="-1140" y="-15" key="AndroidCreateResourceFileDialog/0.0.1536.824/-1440.-200.1440.860@-1440.-200.1440.860" timestamp="1600615841121" />
-    <state x="-861" y="60" key="AndroidCreateXmlResourceDialog" timestamp="1600167590885">
-      <screen x="-1440" y="-200" width="1440" height="860" />
+    <state x="308" y="505" key="AndroidCreateXmlResourceDialog" timestamp="1600872948872">
+      <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="-861" y="60" key="AndroidCreateXmlResourceDialog/0.0.1536.824/-1440.-200.1440.860@-1440.-200.1440.860" timestamp="1600167590885" />
+    <state x="308" y="505" key="AndroidCreateXmlResourceDialog/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1600872948872" />
     <state x="-940" y="-15" key="FileChooserDialogImpl" timestamp="1600632003628">
       <screen x="-1440" y="-200" width="1440" height="860" />
     </state>
@@ -182,5 +184,9 @@
       <screen x="-1440" y="-200" width="1440" height="860" />
     </state>
     <state x="-1024" y="54" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1440.-200.1440.860@-1440.-200.1440.860" timestamp="1600681814453" />
+    <state x="624" y="238" key="run.anything.popup" timestamp="1600868691434">
+      <screen x="0" y="0" width="1920" height="1044" />
+    </state>
+    <state x="624" y="238" key="run.anything.popup/0.0.1920.1044/1920.0.1920.1080@0.0.1920.1044" timestamp="1600868691434" />
   </component>
 </project>
