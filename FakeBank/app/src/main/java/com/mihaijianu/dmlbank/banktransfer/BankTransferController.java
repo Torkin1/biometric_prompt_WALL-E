@@ -27,6 +27,6 @@ public class BankTransferController {
     private void doTransfer(Account account, int amount){
 
         // Does the transfer
-        account.setBalance(account.getBalance() - amount);
+        account.setBalance(account.getBalance() + amount);
     }
 }
