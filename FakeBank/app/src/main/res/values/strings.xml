@@ -8,11 +8,16 @@
     <string name="TRANSFER_FAILED_CANT_READ_AMOUNT_FROM_GUI">Transfer failed, unable to read amount from gui</string>
     <string name="TRANSFER_FAILED_AUTH_FAILED">Transfer failed due to authentication failed</string>
     <string name="FAILED_TO_CHECK_NON_BIOMETRIC_AUTH">Unable to check if non-biometric auth methods are available</string>
-    <string name="NEITHER_BIOMETRIC_NOR_NONBIOMETRIC_ALERT_TITLE">\"Neither Biometric Hardware nor non-biometric credentials are available! \"</string>
+    <string name="NEITHER_BIOMETRIC_NOR_NONBIOMETRIC_ALERT_TITLE">\"No auth method available! \"</string>
     <string name="NEITHER_BIOMETRIC_NOR_NONBIOMETRIC_ALERT_MSG">Transfers are disabled until either Biometric hardware or non-biometric authentication methods are available.</string>
-    <string name="NO_BIOMETRIC_ENROLLED_ALERT_TITLE">No Biometric model enrolled!</string>
-    <string name="NO_BIOMETRIC_ENROLLED_ALERT_MSG">Please enroll a biometric model in order to allow the transfer</string>
+    <string name="ALERT_NO_BIOMETRIC_ENROLLED_TITLE">No Biometric model enrolled!</string>
+    <string name="ALERT_NO_BIOMETRIC_ENROLLED_MSG">You can either enroll a biometric model or use a non-biometric auth method, if available </string>
     <string name="BIOMETRIC_PROMPT_TITLE">Biometric authentication required!</string>
     <string name="BIOMETRIC_PROMPT_SUBTITLE">Allow the transfer using your biometric credentials</string>
-    <string name="TRANSFER_FAILED">Transfer failed: %s (%d)</string>
+    <string name="TRANSFER_FAILED">Transfer failed: %s</string>
+    <string name="BIOMETRIC_PROMPT_NEGATIVE_TEXT">Use non-biometric authentication method</string>
+    <string name="PROMPT_OK">OK</string>
+    <string name="PROMPT_CANCEL">Cancel</string>
+    <string name="ALERT_BIOMETRIC_NONE_ENROLLED_POSITIVE">Enroll</string>
+    <string name="ALERT_BIOMETRIC_NONE_ENROLLED_NEGATIVE">Use non-bio auth</string>
 </resources>
