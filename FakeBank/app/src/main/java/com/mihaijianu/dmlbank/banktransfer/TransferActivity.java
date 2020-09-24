@@ -1,4 +1,4 @@
-package com.mihaijianu.dmlbank;
+package com.mihaijianu.dmlbank.banktransfer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -17,8 +17,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.mihaijianu.dmlbank.banktransfer.BankTransferController;
-import com.mihaijianu.dmlbank.banktransfer.InsufficentBalanceException;
+import com.mihaijianu.dmlbank.R;
 import com.mihaijianu.dmlbank.entities.Account;
 
 public class TransferActivity extends AppCompatActivity {
@@ -49,6 +48,7 @@ public class TransferActivity extends AppCompatActivity {
                             )
                     );
                     Toast.makeText(TransferActivity.this, R.string.TRANSFER_SUCCESS, Toast.LENGTH_SHORT).show();
+                    finish();
                 } catch (InsufficentBalanceException e) {
                     Toast.makeText(TransferActivity.this, R.string.TRANSFER_FAILED_INSUFFICIENT_FUNDS, Toast.LENGTH_LONG).show();
                 } catch (NullPointerException | NumberFormatException e) {
@@ -90,7 +90,7 @@ public class TransferActivity extends AppCompatActivity {
                                 .setMessage(R.string.NEITHER_BIOMETRIC_NOR_NONBIOMETRIC_ALERT_MSG)
                                 .create()
                                 .show();
-                        return;
+                        finish();
                     }
                     break;
                 }
@@ -128,6 +128,7 @@ public class TransferActivity extends AppCompatActivity {
 
         private Holder() {
             this.textInputAmount = findViewById(R.id.text_input_amount);
+            this.bTransfer = findViewById(R.id.transfer_button);
             this.bTransfer.setOnClickListener(new onBTransferClickListener());
         }
 

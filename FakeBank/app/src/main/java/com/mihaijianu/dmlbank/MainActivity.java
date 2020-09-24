@@ -1,6 +1,5 @@
 package com.mihaijianu.dmlbank;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -8,24 +7,19 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 
-import androidx.biometric.BiometricPrompt;
-import androidx.biometric.BiometricManager;
-import androidx.core.content.ContextCompat;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.mihaijianu.dmlbank.banktransfer.TransferActivity;
 import com.mihaijianu.dmlbank.entities.Account;
 
 import java.util.ArrayList;
-import java.util.concurrent.Executor;
 
 public class MainActivity extends AppCompatActivity {
 
