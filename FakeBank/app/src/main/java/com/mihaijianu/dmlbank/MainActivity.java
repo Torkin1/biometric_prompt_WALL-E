@@ -24,10 +24,13 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     TextView username, walletuser;
-
+    TextView cash_amount_text;
     Account account = Account.getReference();
+
     String user = account.getUsername();
-    int currentBudget = account.getBalance();
+    int currentBudget;
+
+    ArrayList<PieEntry> visitors = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +40,15 @@ public class MainActivity extends AppCompatActivity {
         username = findViewById(R.id.username);
         username.setText(user);
 
+        currentBudget = account.getBalance();
+
+        cash_amount_text = findViewById(R.id.cash_amount_text);
+        cash_amount_text.setText(Integer.toString(currentBudget));
+
         //creating the chart
         //Todo: creare il grafico, Ã¨ uno standard, vanno aggiunte le variabili
         PieChart pieChart = findViewById(R.id.pieChart);
-        ArrayList<PieEntry> visitors = new ArrayList<>();
+
 
         // creato un array che comporra i dati del grafico a torta, con dati passati e l'ultimo da aggiornare,
         //con le entrate mensili/giornaliere
@@ -77,5 +85,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        currentBudget = account.getBalance();
+
+        visitors.set(visitors.size() - 1, new PieEntry(currentBudget, "2020"));
+        cash_amount_text.setText(Integer.toString(currentBudget) + " $");
     }
 }
